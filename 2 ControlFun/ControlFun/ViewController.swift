@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     @IBAction func onButtonPressed(_ sender: UIButton) {
         let controller = UIAlertController(title: "Are you sure", message: nil, preferredStyle: .actionSheet)
         let yesAction = UIAlertAction(title: "Yes", style: .destructive, handler: { action in
+            //обработчик нажатия кнопки YES
             let msg = self.nameField.text!.isEmpty ? "all is OK" : "all is ok, \(self.nameField.text!)"
             let controller2 = UIAlertController(title: "Something was done", message: msg, preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Phew", style: .cancel, handler: nil)
